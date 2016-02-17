@@ -1,6 +1,6 @@
 # TravisEx
 
-Travis-ci API client library for Elixir
+[Travis-ci API](https://docs.travis-ci.com/api) client library for Elixir
 
 ## Installation
 
@@ -17,3 +17,11 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
         def application do
           [applications: [:travis_ex]]
         end
+
+## Usage
+
+```iex
+iex> client = %TravisEx.Client{auth: "bb1568179c33308f4da7dceab"}
+iex> %{"repo" => %{"last_build_id" => build_id}} = TravisEx.Repos.get "duksis/travis_ex", client
+iex> TravisEx.Builds.restart(build_id)
+```
