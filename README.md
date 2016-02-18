@@ -1,10 +1,34 @@
 # TravisEx
 
+[![Build Status](https://travis-ci.org/duksis/travis_ex.svg?branch=master)](https://travis-ci.org/duksis/travis_ex)
+
 [Travis-ci API](https://docs.travis-ci.com/api) client library for Elixir
 
-## Installation
+## API coverage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+[Entities:](https://docs.travis-ci.com/api?http#entities)
+  * [ ] Accounts
+  * [ ] Annotations
+  * [ ] Branches
+  * [ ] Broadcasts
+  * [ ] Builds
+  * [ ] Caches
+  * [ ] Commits
+  * [ ] Hooks
+  * [ ] Jobs
+  * [ ] Logs
+  * [ ] Permissions
+  * [ ] Repository Keys
+  * [x] Repositories
+  * [ ] Requests
+  * [ ] Settings: General
+  * [ ] Settings: Environment Variables
+  * [ ] Settings: SSH Key
+  * [ ] Users
+
+  as you can see still a far way to go!
+
+## Installation
 
   1. Add travis_ex to your list of dependencies in `mix.exs`:
 

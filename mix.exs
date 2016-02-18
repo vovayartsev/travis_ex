@@ -9,6 +9,7 @@ defmodule TravisEx.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.2",
      description: @description,
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      test_coverage: [tool: ExCoveralls],
@@ -30,5 +31,13 @@ defmodule TravisEx.Mixfile do
       {:exvcr, "~> 0.6", only: :test},
       {:excoveralls, "~> 0.4", only: :test}
     ]
+  end
+
+  defp package do
+    [
+     files: ["lib", "mix.exs", "README*", "LICENSE*",
+     maintainers: ["Hugo Duksis"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/duksis/travis_ex"}]
   end
 end
