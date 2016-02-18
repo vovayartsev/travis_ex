@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-agent": "travis_ex",
+        "Accept": "application/vnd.travis-ci.2+json",
+        "Authorization": "token 9f9V13ovJOLYPqvW-A"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.travis-ci.org/repos/duksis/travis_ex"
+    },
+    "response": {
+      "body": "{\"repo\":{\"id\":7617327,\"slug\":\"duksis/travis_ex\",\"active\":true,\"description\":\"Travis-ci API client library for Elixir\",\"last_build_id\":null,\"last_build_number\":null,\"last_build_state\":\"\",\"last_build_duration\":null,\"last_build_language\":null,\"last_build_started_at\":null,\"last_build_finished_at\":null,\"github_language\":\"Elixir\"}}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Server": "nginx",
+        "Date": "Thu, 18 Feb 2016 10:11:32 GMT",
+        "Content-Type": "application/json;charset=utf-8",
+        "Content-Length": "327",
+        "Status": "200 OK",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Expose-Headers": "Content-Type, Cache-Control, Expires, Etag, Last-Modified",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Endpoint": "Travis::Api::App::Endpoint::Repos",
+        "X-Pattern": "/:owner_name/:name",
+        "X-Oauth-Scopes": "public,private",
+        "X-Accepted-Oauth-Scopes": "public",
+        "Vary": "Accept,Accept-Encoding",
+        "Cache-Control": "no-cache, private",
+        "Etag": "\"40ba0be74a3d0a34d461dc8ae47d165e\"",
+        "X-Rack-Cache": "miss",
+        "Via": "1.1 vegur"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

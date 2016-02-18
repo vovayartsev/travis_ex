@@ -22,6 +22,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ```iex
 iex> client = TravisEx.Client.new(auth: "bb1568179c33308f4da7dceab")
-iex> %{"repo" => %{"last_build_id" => build_id}} = TravisEx.Repos.get "duksis/travis_ex", client
-iex> TravisEx.Builds.restart(build_id)
+iex> %{"repo" => %{"last_build_state" => build_state}} = TravisEx.Repos.get "duksis/travis_ex", client
+iex> build_state #=> "passed"
 ```
