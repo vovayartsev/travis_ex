@@ -1,12 +1,13 @@
 defmodule TravisEx.Mixfile do
   use Mix.Project
+
   @description """
     Travis-ci API client library for Elixir
   """
 
   def project do
     [app: :travis_ex,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.0",
      description: @description,
      package: package,
