@@ -35,9 +35,10 @@ defmodule TravisEx.Mixfile do
 
   defp package do
     [
-     files: ["lib", "mix.exs", "README*", "LICENSE*",
-     maintainers: ["Hugo Duksis"],
-     licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/duksis/travis_ex"}]
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Hugo Duksis"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/duksis/travis_ex"}
+    ]
   end
 end
