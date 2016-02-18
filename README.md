@@ -49,3 +49,21 @@ iex> client = TravisEx.Client.new(auth: "bb1568179c33308f4da7dceab")
 iex> %{"repo" => %{"last_build_state" => build_state}} = TravisEx.Repos.get "duksis/travis_ex", client
 iex> build_state #=> "passed"
 ```
+
+
+## License
+
+Released under the [MIT license](LICENSE).
+
+
+## Contributing
+
+Start by forking this repo
+
+Then run this command to fetch dependencies and run tests:
+
+```console
+MIX_ENV=test mix do deps.get, test
+```
+
+Pull requests are greatly appreciated
