@@ -11,9 +11,9 @@ defmodule TravisEx.Repos do
     https://docs.travis-ci.com/api#repositories
   """
 
-  @spec get(binary, TravisEx.Client.t) :: map
+  @spec get(binary, TravisEx.Client.t()) :: map
   def get(slug, client) do
-    _get("repos/#{slug}", client)
+    _get("repo/#{URI.encode_www_form(slug)}", client)
   end
 
   defp _get(path, client, options \\ []) do
@@ -22,6 +22,6 @@ defmodule TravisEx.Repos do
   end
 
   defp process_response(response) do
-    response.body |> Poison.decode!
+    response.body |> Poison.decode!()
   end
 end
