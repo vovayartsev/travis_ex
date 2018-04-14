@@ -10,12 +10,12 @@ defmodule TravisEx.Mixfile do
      version: "0.0.2",
      elixir: "~> 1.0",
      description: @description,
-     package: package,
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      test_coverage: [tool: ExCoveralls],
      preferred_cli_env: [coveralls: :test],
-     deps: deps]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -28,7 +28,7 @@ defmodule TravisEx.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.8"},
-      {:poison, "~> 1.5"},
+      {:poison, ">= 1.5.0"},
       {:exvcr, "~> 0.6", only: :test},
       {:excoveralls, "~> 0.4", only: :test}
     ]

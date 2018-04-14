@@ -50,6 +50,11 @@ iex> %{"repo" => %{"last_build_state" => build_state}} = TravisEx.Repos.get "duk
 iex> build_state #=> "passed"
 ```
 
+NOTE: provide `:endpoint` option explicitely when using with Travis CI PRO
+
+```iex
+iex> client = TravisEx.Client.new(auth: "bb1568179c33308f4da7dceab", endpoint: :pro)
+```
 
 ## License
 
