@@ -18,6 +18,16 @@ defmodule TravisEx.Requests do
     _post("repo/#{URI.encode_www_form(slug)}/requests", payload, client)
   end
 
+  @spec get(binary, binary, TravisEx.Client.t()) :: map
+  def get(request_id, repo_slug, client) do
+    _get("repo/#{URI.encode_www_form(repo_slug)}/request/#{request_id}", client)
+  end
+
+  defp _get(path, client, options \\ []) do
+    request!(:get, client.endpoint <> path, "", client.headers, options)
+    |> process_response
+  end
+
   defp _post(path, payload, client, options \\ []) do
     post!(client.endpoint <> path, Poison.encode!(payload), client.headers, options)
     |> process_response
