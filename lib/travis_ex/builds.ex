@@ -1,19 +1,19 @@
-defmodule TravisEx.Repos do
+defmodule TravisEx.Builds do
   use HTTPoison.Base
 
   @doc """
   Fetch repository
 
   ## Examples
-    TravisEx.Repos.get("duksis/travis_ex", client)
+    TravisEx.Builds.get("1234567", client)
 
   ## More info
-    https://docs.travis-ci.com/api#repositories
+    https://developer.travis-ci.com/resource/build#Build
   """
 
   @spec get(binary, TravisEx.Client.t()) :: map
-  def get(slug, client) do
-    _get("repo/#{URI.encode_www_form(slug)}", client)
+  def get(build_id, client) do
+    _get("build/#{build_id}", client)
   end
 
   defp _get(path, client, options \\ []) do

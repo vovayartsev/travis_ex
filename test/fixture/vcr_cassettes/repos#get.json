@@ -4,7 +4,9 @@
       "body": "",
       "headers": {
         "User-agent": "travis_ex",
-        "Accept": "application/vnd.travis-ci.2+json",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Travis-API-Version": "3",
         "Authorization": "token 9f9V13ovJOLYPqvW-A"
       },
       "method": "get",

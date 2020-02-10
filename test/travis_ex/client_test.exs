@@ -13,7 +13,9 @@ defmodule TravisEx.ClientTest do
   test "headers" do
     assert @client.headers == [
       {"User-agent", "travis_ex"},
-      {"Accept", "application/vnd.travis-ci.2+json"},
+      {"Accept", "application/json"},
+      {"Content-Type", "application/json"},
+      {"Travis-API-Version", "3"},
       {"Authorization", "token token"}
     ]
   end
